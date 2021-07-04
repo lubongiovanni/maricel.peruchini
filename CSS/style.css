@@ -1,0 +1,243 @@
+body {
+	background: #eee7df;
+}
+
+.titulo {
+    background-color: rgb(229, 192, 220);
+    border-radius: 10px;
+    color: rgb(33, 4, 36);
+    font-family: "Lucida Handwriting", "Courier New", cursive;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(104, 95, 103);
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.titulosecundario {
+    color: rgb(3, 3, 37);
+    font-family: "Lucida Console", "Courier New", cursive;
+    text-align: center;
+}
+
+.indice-flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	flex-flow: nowrap;
+	justify-content: center;
+}
+.indice-flex > div a {	
+	color: rgb(80, 83, 82);
+}
+
+.indice-flex > div a:hover {
+    color: #08505a;
+	text-decoration: none;
+	transform: scale(2,1);
+    transition: 2s;
+}
+
+
+.contenedor { 
+	max-width: 90%;
+	margin: auto;
+}
+
+.contenedor__cards {
+	margin: 20px 0;
+}
+
+.card {
+	background-image: url("../IMG/paper.jpg");
+	background-size: cover;
+    border-radius: 15px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin-bottom: 50px;
+}
+
+.card__thumbnail {
+	margin-right: 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.card__img {
+	max-width: 200px;
+	max-height: 250px;
+	width: 100%;
+}
+
+.card__titulo {
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	font-weight: normal;
+	margin-bottom: 20px;
+    font-family: 'Mate SC', serif;
+}
+
+.card__titulo:hover{
+    text-decoration: underline;
+}
+.card__enlace {
+	color: #000;
+}
+
+.card__extracto {
+	line-height: 1,5;
+	color: #6D6D6D;
+	margin-bottom: 20px;
+}
+
+.cuadro{
+    max-width: 95%;
+	margin: 5% 10%;
+    border-radius: 15px;
+	padding: auto;
+	display: flex;
+    background: rgb(227, 192, 228);
+    border: 2px solid rgb(40, 5, 56);
+}
+.cuadro__texto {
+    color: #3f3c3c;
+    border-radius: 15px;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin-bottom: 15px;
+	line-height: 1,5;
+}
+
+/* NOVEDADES */
+#fotos{
+	display: grid;
+	grid-template-areas: 
+        "cuadro1 cuadro2 cuadro3"
+        "texto1 texto2 texto3"
+    ;
+	grid-template-rows: auto auto;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-gap: 15px; /*Entre Columnas dejar vacío*/
+    grid-row-gap: 5px; /*Entre Filas dejar vacío*/
+    padding: 3%;
+}
+#cuadro1{
+	grid-area: cuadro1;
+	justify-self: center;
+}
+#cuadro2{
+	grid-area: cuadro2;
+	justify-self: center;
+}
+#cuadro3{
+	grid-area: cuadro3;
+	justify-self: center;
+}
+#texto1{
+	grid-area: texto1;
+}
+#texto2{
+	grid-area: texto2;
+}
+#texto3{
+	grid-area: texto3;
+}
+
+.contornogral section img:hover{
+	transform: scale(1.5,1.5);
+    transition: 2s;
+}
+
+/* FIN DE NOVEDADES */
+
+/* CONTACTOS */
+.contornogral{
+	margin: 5%;
+	border-radius: 10px;
+	background-image: radial-gradient(circle,#d3c8c8, #b590b9); 
+}
+
+#formulario{
+	display: grid;
+	grid-template-areas: 
+        "nombre introducirnombre"
+        "telefono introducirtelefono"
+		"email introduciremail"
+		"eleccion introducireleccion"
+		"actualizaciones introduciractualizaciones"
+		"comentarios comentarios"
+		"introducircomentarios introducircomentarios"
+		"enviar limpiar"
+    ;
+	grid-template-rows: auto auto auto auto auto auto 50px auto;
+    grid-template-columns: 30% 70%;
+    grid-column-gap: 5px; /*Entre Columnas dejar vacío*/
+    grid-row-gap: 5px; /*Entre Filas dejar vacío*/
+    margin-left: 0px;
+}
+
+label#nombre{
+	grid-area: nombre;
+}
+input#introducirnombre{
+	grid-area: introducirnombre;
+}
+label#telefono{
+	grid-area: telefono;
+}
+input#introducirtelefono{
+	grid-area: introducirtelefono;
+}
+label#email{
+	grid-area: email;
+}
+input#introduciremail{
+	grid-area: introduciremail;
+}
+label#eleccion{
+	grid-area: eleccion;
+}
+select#introducir{
+	grid-area: introducireleccion;
+}
+div#actualizaciones{
+	grid-area: actualizaciones;
+}
+input#introduciractualizaciones{
+	grid-area: introduciractualizaciones;
+	justify-self: start;
+}
+label#comentarios{
+	grid-area: comentarios;
+}
+textarea#introducircomentarios {
+	grid-area: introducircomentarios;
+}
+input#enviar{
+	grid-area: enviar; 
+}
+input#limpiar{
+	grid-area: limpiar; 
+}
+
+/* FINALIZA CONTACTOS */
+
+footer{
+    background-color: #352f2f;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+	margin-bottom: 10px; 
+}
+
+.piedepagina div a{
+	color: rgb(170, 166, 173);
+}
+
+.piedepagina div a:hover{
+    color: white;
+}
